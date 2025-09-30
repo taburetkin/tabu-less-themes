@@ -1,0 +1,21 @@
+#app.vertical-layout {
+	> header {
+		> nav {
+			.breadcrumbs {
+				.ff-b();
+				padding: @gutter-quart;
+				text-transform: uppercase;
+				font-size: 9px;
+				.breadcrumb {
+					a {
+
+						color: #888;
+					}
+					.link-name:not(:first-child) {
+						margin-left: @gutter-quart;
+					}
+				}
+			}
+		}
+	}
+}
