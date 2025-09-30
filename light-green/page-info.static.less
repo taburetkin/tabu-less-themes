@@ -1,0 +1,55 @@
+@import '../common/buttons.env.less';
+@import './buttons.env.less';
+
+.page-info {
+	
+	.tab-trigger {
+		border-top-left-radius: @theme-button-border-radius;
+		border-top-right-radius: @theme-button-border-radius;
+		background-color: darken(@theme-block-bg-color, 25);
+		padding-left: @gutter-half;
+		padding-right: @gutter-half;
+		align-items: center;
+
+		#theme-btns.appearance(@theme-iconbutton-size, @theme-button-font);
+
+		.icon {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			justify-content: center;
+			text-align: center;
+			font-size: 12px;
+		}
+		.button-text {
+			text-transform: uppercase;
+			font-size: 12px;
+		}
+
+		&.active {
+			background-color: @theme-block-bg-color;
+		}
+	}
+
+	.tab-content {
+		background-color: @theme-block-bg-color;
+	}
+}
+
+
+.modal-page-info {
+	.page-info {
+		padding: @theme-button-border-radius;
+		background-color: darken(@theme-block-bg-color, 55);
+	}
+	.tab-triggers {
+		margin-right: 30px;
+		padding-top: 2px;
+	}
+	.close {
+		top: @theme-button-border-radius;
+		right: @theme-button-border-radius;
+		border-radius: @theme-button-border-radius;
+		background-color: @theme-block-bg-color;
+	}
+}
