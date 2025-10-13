@@ -1,19 +1,116 @@
 #app.vertical-layout {
 	> header {
+
+		@btnsize: 40px;
+
+		background-color: @theme-color-primary;
+		color: @theme-primary-text-color;
+		position: relative;
+
+		button, a {
+			color: @theme-primary-text-color;
+		}
+		.header-container {
+			margin-top: 10px;
+			&:last-child:first-child {
+				margin: 0;
+				//margin-bottom: 10px;
+			}
+		}
 		> nav {
+			position: absolute;
+			left: @btnsize;
+			top: 3px;
 			.breadcrumbs {
 				.ff-b();
-				padding: @gutter-quart;
+				//padding: @gutter-quart;
 				text-transform: uppercase;
 				font-size: 9px;
+				display: flex;
+				flex-direction: row;
 				.breadcrumb {
 					a {
-
-						color: #888;
+						display: inline-block;
+						background-color: #00000010;
+						border-radius: @theme-block-border-radius;
+						//color: #888;
+						padding: 1px @theme-block-border-radius;
+						text-decoration: none;
 					}
-					.link-name:not(:first-child) {
+					.link-name:not(:first-child):not(:empty) {
 						margin-left: @gutter-quart;
 					}
+				}
+			}
+		}
+		.main-menu {
+			width: @btnsize;
+			height: @btnsize;
+			> span {
+				justify-content: center;
+			}
+		}
+		.header-text {
+			font-family: @font-header;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 18px;
+		}
+
+
+		.additionals {
+			display: flex;
+			flex-direction: row;
+			padding: @gutter-quart;
+			column-gap: @gutter-quart;
+			row-gap: @gutter-quart;
+			align-items: center;
+		}
+
+		.additional {
+			border-radius: @theme-button-border-radius;
+			background-color: #00000010;
+			a {
+				text-decoration: none;
+				display: flex;
+				flex-direction: row;
+				padding: @gutter-quart;
+				column-gap: @gutter-quart;
+				row-gap: @gutter-quart;
+				font-size: 10px;
+				text-transform: uppercase;
+			}
+			.link-name {
+				.ff-l();
+			}
+		}
+
+		.subpages {
+			padding: 0 @gutter-half;
+			.subpage {
+				&.requested {
+					background-color: @theme-block-bg-color;
+					a {
+						color: @theme-block-text-color;
+					}
+				}
+			}
+		}
+		.subpage {
+			.ff-b();
+			text-transform: uppercase;
+			font-size: 12px;
+			padding: @gutter-half @gutter;
+			border-top-left-radius: @theme-block-border-radius;
+			border-top-right-radius: @theme-block-border-radius;
+			a {
+				text-decoration: none;
+
+			}
+			.link-name {
+				font-weight: bold;
+				&:not(empty):not(:first-child) {
+					margin-left: @gutter-half;
 				}
 			}
 		}

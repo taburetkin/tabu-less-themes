@@ -1,0 +1,28 @@
+.app-btn {
+	border-radius: @theme-button-border-radius;
+	box-sizing: border-box;
+	.button-text {
+		.ff-b();
+		text-transform: uppercase;
+		line-height: 1;
+	}
+	.icon + .button-text:not(:empty) {
+		margin-left: @gutter-half;
+	}
+
+
+	&.default {
+
+		background-color: #00000010;
+		border-top: 1px solid transparent;
+		border-left: 1px solid transparent;
+		border-bottom: 1px solid #00000020;
+		border-right: 1px solid #00000020;
+		&:active {
+			border-bottom-color: transparent;
+			border-right-color: transparent;
+			border-top-color: #00000020;
+			border-left-color: #00000020;
+		}
+	}
+}

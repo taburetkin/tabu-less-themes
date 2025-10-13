@@ -1,0 +1,53 @@
+#app.vertical-layout {
+	> section {
+
+	}
+
+	.content {
+		background-color: @theme-block-bg-color;
+	}
+
+
+	.children-plates {
+		display: flex;
+		padding: @gutter;
+		column-gap: @gutter;
+		row-gap: @gutter;
+		flex-wrap: wrap;
+	}
+	.page-plate {
+		border-radius: @theme-block-border-radius;
+		background-color: #00000010;
+		box-shadow: @theme-block-box-shadow-normal;
+		background-color: #fff8f8;
+		> a {
+			text-decoration: none;
+			display: flex;
+			flex-direction: row;
+			padding: @gutter;
+			column-gap: @gutter;
+			row-gap: @gutter;
+		}
+		.icon {
+			//padding: @gutter;
+		}
+		.link-name {
+			display: block;
+			.ff-b();
+			text-transform: uppercase;
+			//padding: @gutter;
+			// &:not(:first-child):not(:empty) {
+			// 	margin-left: 
+			// }
+		}
+	}
+
+}
+
+.mobile .children-plates, .tablet .children-plates {
+	flex-direction: column;
+}
+
+.desktop .children-plates {
+	flex-direction: row;
+}
