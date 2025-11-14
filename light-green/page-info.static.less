@@ -118,23 +118,20 @@
 			.icon {
 				width: @icon-width;
 				text-align: center;
-				color: #00000030;
+				color: @theme-navtree-link-icon-color;
 				font-size: 12px;
 				svg {
 					width: 12px;
 					height: 12px;
-					fill: #00000030;
+					fill: @theme-navtree-link-icon-color;
 				}
 				//color: @theme-block-link-icon-color;
-			}
-			.icon.svg-container {
-
 			}
 			> span.link-name {
 				.ff-b();
 				font-size: 12px;
 
-				color: #444;
+				color: @theme-navtree-link-color;
 
 				//color: @theme-block-link-color;
 
@@ -151,10 +148,13 @@
 		&.parent-of-current {
 			a {
 				.icon {
-					color: #00000090;
+					color: @theme-navtree-parent-of-current-icon-color;
+					svg {
+						fill: @theme-navtree-parent-of-current-icon-color;
+					}
 				}
 				.link-name {
-					color: #000;
+					color: @theme-navtree-parent-of-current-color;
 					font-weight: 700;
 				}
 			}
@@ -162,10 +162,10 @@
 		&.current {
 			a {
 				.icon {
-					color: @theme-block-link-icon-color
+					color: @theme-navtree-current-icon-color;
 				}
 				.link-name {
-					color: @theme-block-link-color;
+					color: @theme-navtree-current-color;
 					font-weight: 700;
 				}
 			}
