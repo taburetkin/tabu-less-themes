@@ -4,7 +4,7 @@
 	}
 
 	.content {
-		background-color: @theme-block-bg-color;
+		background-color: @theme-body-bg-color;
 	}
 
 
@@ -17,9 +17,10 @@
 	}
 	.page-plate {
 		border-radius: @theme-block-border-radius;
-		background-color: #00000010;
+		//background-color: #00000010;
+		background-color: @theme-block-bg-color;
 		box-shadow: @theme-block-box-shadow-normal;
-		background-color: #fff8f8;
+		//background-color: #fff8f8;
 		> a {
 			text-decoration: none;
 			display: flex;
@@ -28,9 +29,15 @@
 			column-gap: @gutter;
 			row-gap: @gutter;
 			align-items: center;
+			color: @theme-block-link-color;
+			.icon {
+				color: fade(@theme-block-link-icon-color, 30);
+				svg {
+					fill: fade(@theme-block-link-icon-color, 30);
+				}
+			}
 		}
 		.icon {
-			//padding: @gutter;
 			font-size: 24px;
 		}
 		.icon.svg-container {
